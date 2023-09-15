@@ -6,9 +6,11 @@ include('validarCliente.php');
 if (isset($_POST['login']) || isset($_POST['senha'])) {
 
     if (strlen($_POST['login']) == 0) {
+        /* Redireciona o usuário de volta para a página inicial se o campo de login estiver vazio */
         header("location: index.php");
         exit(); // Para interromper a execução após o redirecionamento
     } else if (strlen($_POST['senha']) == 0) {
+        /* Redireciona o usuário de volta para a página inicial se o campo de senha estiver vazio */
         header("location: index.php");
         exit();
     } else {
@@ -22,7 +24,7 @@ if (isset($_POST['login']) || isset($_POST['senha'])) {
         $quantidade = $sql_query->num_rows;
 
         if ($quantidade == 1) {
-
+            /* Se houver um cliente correspondente, armazena informações de sessão e redireciona para a página principal */
             $usuario = $sql_query->fetch_assoc();
 
             if (!isset($_SESSION)) {
@@ -35,6 +37,7 @@ if (isset($_POST['login']) || isset($_POST['senha'])) {
             header("location: principal.php");
             exit(); // Para interromper a execução após o redirecionamento
         } else {
+            /* Se não houver correspondência de cliente, redireciona de volta para a página inicial */
             header("location: index.php");
             exit();
         }
