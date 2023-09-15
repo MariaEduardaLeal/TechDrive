@@ -12,3 +12,4 @@ if($mysqli ->connect_errno){
     echo "Erro: " . $mysqli->connect_error; 
 }
 ?>
+
