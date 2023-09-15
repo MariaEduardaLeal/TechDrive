@@ -1,0 +1,31 @@
+CREATE DATABASE IF NOT EXISTS oficina_mecanica;
+
+USE oficina_mecanica;
+
+CREATE TABLE IF NOT EXISTS Clientes (
+    idcliente INT AUTO_INCREMENT PRIMARY KEY,
+    login varchar(200) NOT NULL,
+    senha varchar(200) NOT NULL,
+    nome VARCHAR(255) NOT NULL,
+    telefone VARCHAR(15) NOT NULL,
+    email VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Veiculos (
+    idveiculo INT AUTO_INCREMENT PRIMARY KEY,
+    marca VARCHAR(50) NOT NULL,
+    modelo VARCHAR(50) NOT NULL,
+    ano INT(4),
+    placa VARCHAR(10),
+    idcliente INT,
+    FOREIGN KEY (idcliente) REFERENCES Clientes (idcliente)
+);
+
+CREATE TABLE IF NOT EXISTS Servicos (
+    idservico INT AUTO_INCREMENT PRIMARY KEY,
+    descricaodervico TEXT,
+    dataservico DATE,
+    custo DECIMAL(10, 2),
+    idveiculo INT,
+    FOREIGN KEY (idveiculo) REFERENCES Veiculos (idveiculo)
+);
