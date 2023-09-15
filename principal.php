@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sistema de Oficina</title>
+    <link rel="stylesheet" type="text/css" href="css/principal.css">
 </head>
-
 <body>
-        <a href=""></a>
-        <a href="sair.php"> Sair</a>
+    <header>
+        <h1>Sistema de Oficina</h1>
+        <nav>
+            <ul>
+                <li><a href="clientes.php">Gerenciar Clientes</a></li>
+                <li><a href="servicos.php">Gerenciar Serviços</a></li>
+                <li><a href="funcionarios.php">Gerenciar Funcionários</a></li>
+                <li><a href="agendamento.php">Agendamento de Serviços</a></li>
+            </ul>
+        </nav>
+    </header>
 
-
-</body>
-
+    
 </html>
