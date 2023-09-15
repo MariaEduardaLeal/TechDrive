@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    background-color: #243D66;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.area-login {
+    display: flex;
+    height: 75vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    background-color: #6e61ca;
+    width: 355px;
+    height: 275px;
+    text-align: center;
+    display: flexbox;
+    flex-direction: column;
+    padding: 35;
+    border-radius: 10%;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login input {
+    text-align: center;
+    margin-top: 15px;
+    background-color: #ebedee;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 250px;
+    margin: auto;
+}
